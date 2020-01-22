@@ -11,6 +11,9 @@ void LargeFish::Start()
 	_size = Vector2D(128, 128);
 	_position = Vector2D(100, 735);
 	_velocity = Vector2D(0, 0);
+
+	weight = 0.8;
+	score = 3000;
 }
 
 //	•`‰æ

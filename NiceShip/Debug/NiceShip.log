@@ -52,21 +52,21 @@ c:\teamship\niceship\gameplay.cpp(616): warning C4018: '<': signed と unsigned 
 c:\teamship\niceship\gameplay.cpp(625): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
 c:\teamship\niceship\gameplay.cpp(635): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
 c:\teamship\niceship\gameplay.cpp(643): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-  GraphFactory.cpp
-  LargeFish.cpp
-  MiddleFish.cpp
   Player.cpp
 c:\teamship\niceship\player.cpp(31): warning C4305: '=': 'double' から 'float' へ切り詰めます。
 c:\teamship\niceship\player.cpp(32): warning C4305: '=': 'double' から 'float' へ切り詰めます。
-c:\teamship\niceship\player.cpp(65): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\teamship\niceship\player.cpp(71): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-c:\teamship\niceship\player.cpp(194): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  Port.cpp
-  SceneManager.cpp
-  SmallFish.cpp
-  Special.cpp
-  Title.cpp
-  Vector2D.cpp
-  WinMain.cpp
+c:\teamship\niceship\player.cpp(36): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\teamship\niceship\player.cpp(37): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\teamship\niceship\player.cpp(39): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\teamship\niceship\player.cpp(163): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\teamship\niceship\player.cpp(169): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\teamship\niceship\player.cpp(182): warning C4552: '+': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(183): warning C4552: '-': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(189): warning C4552: '+': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(190): warning C4552: '-': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(196): warning C4552: '+': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(197): warning C4552: '-': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(203): warning C4552: '+': 式の結果が使用されていません
+c:\teamship\niceship\player.cpp(204): warning C4552: '-': 式の結果が使用されていません
   コードを生成中...
   NiceShip.vcxproj -> C:\teamShip\NiceShip\Debug\NiceShip.exe

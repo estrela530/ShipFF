@@ -32,9 +32,79 @@ void Player::Start()
 	downSpeed = 0.1;
 	stop = 0;
 
-	hitFlag = FALSE;
+	weight = 0;
+	weightL = 0.8;
+	weightM = 0.4;
+	weightS = 0.25;
+	weightSp = 0.1;
+	score = 0;
+
+	hitLFlag = FALSE;
+	hitMFlag = FALSE;
+	hitSFlag = FALSE;
+	hitSpFlag = FALSE;
+
 }
 
+
+
+//	解放
+void Player::Release()
+{
+}
+
+void Player::Hit(LargeFish l)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (l._position.x + l._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (l._position.y + l._size.y / 2));
+
+	if (x < (playerWid + l._size.x) / 2 && y < (playerHei + l._size.y) / 2)
+	{
+		hitLFlag = TRUE;
+	}
+
+}
+
+void Player::Hit(MiddleFish m)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (m._position.x + m._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (m._position.y + m._size.y / 2));
+
+	if (x < (playerWid + m._size.x) / 2 && y < (playerHei + m._size.y) / 2)
+	{
+		hitMFlag = TRUE;
+	}
+
+}
+
+void Player::Hit(SmallFish s)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (s._position.x + s._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (s._position.y + s._size.y / 2));
+
+	if (x < (playerWid + s._size.x) / 2 && y < (playerHei + s._size.y) / 2)
+	{
+		hitMFlag = TRUE;
+	}
+
+}
+
+void Player::Hit(Special sp)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (sp._position.x + sp._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (sp._position.y + sp._size.y / 2));
+
+	if (x < (playerWid + sp._size.x) / 2 && y < (playerHei + sp._size.y) / 2)
+	{
+		hitSpFlag = TRUE;
+	}
+
+}
+
+void Player::Hit()
+{
+
+}
 
 //	更新
 void Player::Update()
@@ -53,6 +123,34 @@ void Player::Update()
 	/*MoveAngle.x = _velocity.x * _cos - _velocity.y * _sin;
 	MoveAngle.y = _velocity.x * _sin + _velocity.y * _cos;*/
 
+	/*if (hitLFlag)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+		weight + weightL;
+		_vec.x - weight;
+		hitLFlag = false;
+	}
+	if (hitMFlag)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+		weight + weightM;
+		_vec.x - weight;
+		hitMFlag = false;
+	}
+	if (hitSFlag)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+		weight + weightS;
+		_vec.x - weight;
+		hitSFlag = false;
+	}
+	if (hitSpFlag)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+		weight + weightSp;
+		_vec.x - weight;
+		hitSpFlag = false;
+	}*/
 
 	playerPos = VGet(playerPos.x, playerPos.y, 0);
 	//	移動量をクリア	
@@ -78,7 +176,38 @@ void Player::Update()
 		_vec.x += upSpeed;
 		if (_vec.x >= maxLimit)
 		{
+			if (hitLFlag)
+			{
+				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+				weight + weightL;
+				maxLimit - weight;
+				hitLFlag = false;
+			}
+			if (hitMFlag)
+			{
+				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+				weight + weightM;
+				maxLimit - weight;
+				hitMFlag = false;
+			}
+			if (hitSFlag)
+			{
+				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+				weight + weightS;
+				maxLimit - weight;
+				hitSFlag = false;
+			}
+			if (hitSpFlag)
+			{
+				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+				weight + weightSp;
+				maxLimit - weight;
+				hitSpFlag = false;
+			}
 			_vec.x = maxLimit;
+
+			std::string s = std::to_string(maxLimit);
+			printfDx(s.data());
 		}
 	}
 	else if (CheckHitKey(KEY_INPUT_SPACE) == FALSE)
@@ -96,63 +225,7 @@ void Player::Update()
 	//_position += _velocity;
 }
 
-//	解放
-void Player::Release()
-{
-}
 
-void Player::Hit(LargeFish l)
-{
-	auto x = abs((_pos.x + playerWid / 2) - (l._position.x + l._size.x / 2));
-	auto y = abs((_pos.y + playerHei / 2) - (l._position.y + l._size.y / 2));
-
-	if (x < (playerWid + l._size.x) / 2 && y < (playerHei + l._size.y) / 2)
-	{
-		hitFlag = TRUE;
-	}
-
-}
-
-void Player::Hit(MiddleFish m)
-{
-	auto x = abs((_pos.x + playerWid / 2) - (m._position.x + m._size.x / 2));
-	auto y = abs((_pos.y + playerHei / 2) - (m._position.y + m._size.y / 2));
-
-	if (x < (playerWid + m._size.x) / 2 && y < (playerHei + m._size.y) / 2)
-	{
-		hitFlag = TRUE;
-	}
-
-}
-
-void Player::Hit(SmallFish s)
-{
-	auto x = abs((_pos.x + playerWid / 2) - (s._position.x + s._size.x / 2));
-	auto y = abs((_pos.y + playerHei / 2) - (s._position.y + s._size.y / 2));
-
-	if (x < (playerWid + s._size.x) / 2 && y < (playerHei + s._size.y) / 2)
-	{
-		hitFlag = TRUE;
-	}
-
-}
-
-void Player::Hit(Special sp)
-{
-	auto x = abs((_pos.x + playerWid / 2) - (sp._position.x + sp._size.x / 2));
-	auto y = abs((_pos.y + playerHei / 2) - (sp._position.y + sp._size.y / 2));
-
-	if (x < (playerWid + sp._size.x) / 2 && y < (playerHei + sp._size.y) / 2)
-	{
-		hitFlag = TRUE;
-	}
-
-}
-
-void Player::Hit()
-{
-
-}
 //void Player::Hit()
 //{
 //	LargeFish la;
@@ -179,6 +252,9 @@ void Player::Render()
 			static_cast<int>(_position.y),
 			"img\\red.png", FALSE);*/
 
+			//DrawBox(_pos.x - 70, _pos.y - 70, _pos.x + 70, _pos.y + 70, GetColor(255, 0, 0), FALSE);
+
+
 			//途中
 	DrawRotaGraph
 	(
@@ -191,12 +267,7 @@ void Player::Render()
 		FALSE
 	);
 
-	DrawBox(_pos.x - 70, _pos.y - 70, _pos.x + 70, _pos.y + 70, GetColor(255, 0, 0), FALSE);
 
-	if (hitFlag)
-	{
-		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
-	}
 
 
 	/*DrawRotaGraph

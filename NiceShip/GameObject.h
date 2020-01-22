@@ -59,4 +59,12 @@ public:
 	int minLimit;
 	int upSpeed;
 	int downSpeed;
+
+	float weight; // 重さ
+	float weightL; // 重さ
+	float weightM; // 重さ
+	float weightS; // 重さ
+	float weightSp; // 重さ
+
+	int score;// スコア
 };

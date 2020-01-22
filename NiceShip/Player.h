@@ -72,7 +72,10 @@ public:
 	float upSpeed;
 	float downSpeed;
 	float stop;
-	bool hitFlag;
+	bool hitLFlag;
+	bool hitMFlag;
+	bool hitSFlag;
+	bool hitSpFlag;
 
 	Vector2D _velocity;
 	Vector2D _angle;

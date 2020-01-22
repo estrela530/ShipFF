@@ -8,6 +8,10 @@ void MiddleFish::Start()
 	_grp = GraphFactory::Instance().LoadGraph("img\\fishB.png");
 	_size = Vector2D(128, 128);
 	_position = Vector2D(0, 0);
+
+	weight = 0.4;
+	score = 1000;
+
 }
 
 //	•`‰æ

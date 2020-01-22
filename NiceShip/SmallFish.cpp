@@ -8,6 +8,10 @@ void SmallFish::Start()
 	_grp = GraphFactory::Instance().LoadGraph("img\\fishC.png");
 	_size = Vector2D(128, 128);
 	_position = Vector2D(0, 0);
+
+	weight = 0.25;
+	score = 500;
+
 }
 
 //	•`‰æ
