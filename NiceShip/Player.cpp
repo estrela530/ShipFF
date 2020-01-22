@@ -181,33 +181,33 @@ void Player::Update()
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightL;
 				_vec.x = _vec.x - weight;
-				hitLFlag = false;
+				//hitLFlag = false;
 			}
 			if (hitMFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightM;
 				_vec.x = _vec.x - weight;
-				hitMFlag = false;
+				//hitMFlag = false;
 			}
 			if (hitSFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightS;
 				_vec.x = _vec.x - weight;
-				hitSFlag = false;
+				//hitSFlag = false;
 			}
 			if (hitSpFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightSp;
 				_vec.x = _vec.x - weight;
-				hitSpFlag = false;
+				//hitSpFlag = false;
 			}
 			_vec.x = maxLimit;
 
-			std::string s = std::to_string(_vec.x);
-			printfDx(s.data());
+			//std::string s = std::to_string(_vec.x);
+			//printfDx(s.data());
 		}
 	}
 	else if (CheckHitKey(KEY_INPUT_SPACE) == FALSE)

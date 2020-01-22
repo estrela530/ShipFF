@@ -622,6 +622,7 @@ void GamePlay::Update()
 		if (_player.hitLFlag)
 		{
 			largeList.erase(largeList.begin() + i);
+			_player.hitLFlag = false;
 		}
 		else
 		{
@@ -637,7 +638,7 @@ void GamePlay::Update()
 		if (_player.hitMFlag)
 		{
 			middleList.erase(middleList.begin() + i);
-		
+			_player.hitMFlag = false;
 		}
 		else
 		{
@@ -657,6 +658,7 @@ void GamePlay::Update()
 		{
 
 			smallList.erase(smallList.begin() + i);
+			_player.hitSFlag = false;
 		}
 		else
 		{
@@ -673,7 +675,7 @@ void GamePlay::Update()
 		if (_player.hitSpFlag)
 		{
 			specialList.erase(specialList.begin() + i);
-
+			_player.hitSpFlag = false;
 		}
 		else
 		{
