@@ -33,7 +33,7 @@ void Special::Render()
 //	XV
 void Special::Update()
 {
-	
+
 	_position.x += 4;
 
 

@@ -20,11 +20,11 @@ void Player::Start()
 	_cos = 0;
 	playerPos.x = 100;
 	playerPos.y = 100;
-	_vec.x = 0; 
-	_vec.y = 0; 
+	_vec.x = 0;
+	_vec.y = 0;
 
-	playerHei = 128/2;  //プレイヤーの横幅
-	playerWid = 256/2; //プレイヤーの縦幅
+	playerHei = 128 / 2;  //プレイヤーの横幅
+	playerWid = 256 / 2; //プレイヤーの縦幅
 
 	maxLimit = 5;
 	minLimit = 1;
@@ -101,17 +101,69 @@ void Player::Release()
 {
 }
 
-void Player::Hit()
+void Player::Hit(LargeFish l)
 {
-	LargeFish la;
-	auto x = abs((_pos.x + playerWid / 2) - (la._position.x + la._size.x / 2));
-	auto y = abs((_pos.y+ playerHei / 2) - ( la._position.y+ la._size.y / 2));
+	auto x = abs((_pos.x + playerWid / 2) - (l._position.x + l._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (l._position.y + l._size.y / 2));
 
-	if (x < (playerWid + la._size.x) / 2 && y < (playerHei + la._size.y) / 2)
+	if (x < (playerWid + l._size.x) / 2 && y < (playerHei + l._size.y) / 2)
 	{
 		hitFlag = TRUE;
 	}
+
 }
+
+void Player::Hit(MiddleFish m)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (m._position.x + m._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (m._position.y + m._size.y / 2));
+
+	if (x < (playerWid + m._size.x) / 2 && y < (playerHei + m._size.y) / 2)
+	{
+		hitFlag = TRUE;
+	}
+
+}
+
+void Player::Hit(SmallFish s)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (s._position.x + s._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (s._position.y + s._size.y / 2));
+
+	if (x < (playerWid + s._size.x) / 2 && y < (playerHei + s._size.y) / 2)
+	{
+		hitFlag = TRUE;
+	}
+
+}
+
+void Player::Hit(Special sp)
+{
+	auto x = abs((_pos.x + playerWid / 2) - (sp._position.x + sp._size.x / 2));
+	auto y = abs((_pos.y + playerHei / 2) - (sp._position.y + sp._size.y / 2));
+
+	if (x < (playerWid + sp._size.x) / 2 && y < (playerHei + sp._size.y) / 2)
+	{
+		hitFlag = TRUE;
+	}
+
+}
+
+void Player::Hit()
+{
+
+}
+//void Player::Hit()
+//{
+//	LargeFish la;
+//	auto x = abs((_pos.x + playerWid / 2) - (la._position.x + la._size.x / 2));
+//	auto y = abs((_pos.y+ playerHei / 2) - ( la._position.y+ la._size.y / 2));
+//
+//	if (x < (playerWid + la._size.x) / 2 && y < (playerHei + la._size.y) / 2)
+//	{
+//		hitFlag = TRUE;
+//	}
+//}
 
 
 //	描画
@@ -138,14 +190,14 @@ void Player::Render()
 		TRUE,
 		FALSE
 	);
-	
-	DrawBox(_pos.x-70, _pos.y-70, _pos.x+70, _pos.y+70, GetColor(255, 0, 0), FALSE);
+
+	DrawBox(_pos.x - 70, _pos.y - 70, _pos.x + 70, _pos.y + 70, GetColor(255, 0, 0), FALSE);
 
 	if (hitFlag)
 	{
 		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 	}
-	
+
 
 	/*DrawRotaGraph
 	(
