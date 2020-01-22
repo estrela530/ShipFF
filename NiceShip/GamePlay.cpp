@@ -613,38 +613,72 @@ void GamePlay::Update()
 	//	//}
 	//}
 
-	for (auto i = 0; i < largeList.size(); i++)
+	for (auto i = 0; i < largeList.size();)
 	{
 
 		largeList[i].Update();
 		largeList[i].Render();
 		_player.Hit(largeList[i]);
-
+		if (_player.hitLFlag)
+		{
+			largeList.erase(largeList.begin() + i);
+		}
+		else
+		{
+			i++;
+		}
 	}
 
-	for (auto i = 0; i < middleList.size(); i++)
+	for (auto i = 0; i < middleList.size();)
 	{
 		middleList[i].Update();
 		middleList[i].Render();
 		_player.Hit(middleList[i]);
+		if (_player.hitMFlag)
+		{
+			middleList.erase(middleList.begin() + i);
+		
+		}
+		else
+		{
+			i++;
+		}
 
 		//std::string s = std::to_string(middleList[i]._position.y);
 		//printfDx(s.data());
 	}
 
-	for (auto i = 0; i < smallList.size(); i++)
+	for (auto i = 0; i < smallList.size();)
 	{
 		smallList[i].Update();
 		smallList[i].Render();
 		_player.Hit(smallList[i]);
+		if (_player.hitSFlag)
+		{
+
+			smallList.erase(smallList.begin() + i);
+		}
+		else
+		{
+			i++;
+		}
 
 	}
 
-	for (auto i = 0; i < specialList.size(); i++)
+	for (auto i = 0; i < specialList.size(); )
 	{
 		specialList[i].Update();
 		specialList[i].Render();
 		_player.Hit(specialList[i]);
+		if (_player.hitSpFlag)
+		{
+			specialList.erase(specialList.begin() + i);
+
+		}
+		else
+		{
+			i++;
+		}
 
 	}
 #pragma endregion

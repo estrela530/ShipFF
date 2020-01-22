@@ -84,7 +84,7 @@ void Player::Hit(SmallFish s)
 
 	if (x < (playerWid + s._size.x) / 2 && y < (playerHei + s._size.y) / 2)
 	{
-		hitMFlag = TRUE;
+		hitSFlag = TRUE;
 	}
 
 }
@@ -179,34 +179,34 @@ void Player::Update()
 			if (hitLFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
-				weight + weightL;
-				maxLimit - weight;
+				weight = weight + weightL;
+				_vec.x = _vec.x - weight;
 				hitLFlag = false;
 			}
 			if (hitMFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
-				weight + weightM;
-				maxLimit - weight;
+				weight = weight + weightM;
+				_vec.x = _vec.x - weight;
 				hitMFlag = false;
 			}
 			if (hitSFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
-				weight + weightS;
-				maxLimit - weight;
+				weight = weight + weightS;
+				_vec.x = _vec.x - weight;
 				hitSFlag = false;
 			}
 			if (hitSpFlag)
 			{
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
-				weight + weightSp;
-				maxLimit - weight;
+				weight = weight + weightSp;
+				_vec.x = _vec.x - weight;
 				hitSpFlag = false;
 			}
 			_vec.x = maxLimit;
 
-			std::string s = std::to_string(maxLimit);
+			std::string s = std::to_string(_vec.x);
 			printfDx(s.data());
 		}
 	}
