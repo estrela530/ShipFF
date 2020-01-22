@@ -181,6 +181,7 @@ void Player::Update()
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightL;
 				_vec.x = _vec.x - weight;
+				score = score + _largeFish.score;
 				//hitLFlag = false;
 			}
 			if (hitMFlag)
@@ -188,6 +189,8 @@ void Player::Update()
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightM;
 				_vec.x = _vec.x - weight;
+				score = score + _middleFish.score;
+
 				//hitMFlag = false;
 			}
 			if (hitSFlag)
@@ -195,6 +198,8 @@ void Player::Update()
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightS;
 				_vec.x = _vec.x - weight;
+				score = score + _smallFish.score;
+
 				//hitSFlag = false;
 			}
 			if (hitSpFlag)
@@ -202,6 +207,8 @@ void Player::Update()
 				DrawString(0, 0, "“–‚½‚Á‚½!", GetColor(255, 0, 0));
 				weight = weight + weightSp;
 				_vec.x = _vec.x - weight;
+				score = score + _special.score;
+
 				//hitSpFlag = false;
 			}
 			_vec.x = maxLimit;
