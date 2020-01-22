@@ -60,7 +60,7 @@ void LargeFish::Hit()
 //	‰ð•ú
 void LargeFish::Release()
 {
-	
+
 
 }
 

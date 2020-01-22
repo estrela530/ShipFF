@@ -618,6 +618,7 @@ void GamePlay::Update()
 
 		largeList[i].Update();
 		largeList[i].Render();
+		_player.Hit(largeList[i]);
 
 	}
 
@@ -625,6 +626,8 @@ void GamePlay::Update()
 	{
 		middleList[i].Update();
 		middleList[i].Render();
+		_player.Hit(middleList[i]);
+
 		//std::string s = std::to_string(middleList[i]._position.y);
 		//printfDx(s.data());
 	}
@@ -633,12 +636,16 @@ void GamePlay::Update()
 	{
 		smallList[i].Update();
 		smallList[i].Render();
+		_player.Hit(smallList[i]);
+
 	}
 
 	for (auto i = 0; i < specialList.size(); i++)
 	{
 		specialList[i].Update();
 		specialList[i].Render();
+		_player.Hit(specialList[i]);
+
 	}
 #pragma endregion
 
@@ -653,8 +660,6 @@ void GamePlay::Update()
 	//_middleFish.Render();
 	//_smallFish.Render();
 	//_special.Render();
-
-	_player.Hit();
 
 	position += 3;
 
