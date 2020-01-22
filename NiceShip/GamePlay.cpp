@@ -10,6 +10,7 @@ void GamePlay::Initialize()
 {
 	//	ƒQ[ƒ€‰æ–Ê‚Ì”wŒi‰æ‘œ“Ç‚İ‚İ
 	_gameImage = GraphFactory::Instance().LoadGraph("img\\Sea.png");
+	PlayMusic("sound\\gameplayBGM.mp3", DX_PLAYTYPE_LOOP);
 	_player.Start();
 	_port.Start();
 	//_largeFish.Start();
@@ -31,6 +32,7 @@ void GamePlay::Update()
 	{
 		position = 0;
 	}
+
 
 	//DrawExtendGraph(0, 0, 1980, 1280, _gameImage, FALSE);
 
@@ -706,5 +708,6 @@ void GamePlay::Update()
 //	‰ğ•ú
 void GamePlay::Release()
 {
+	StopSoundFile();
 	GraphFactory::Instance().EraseGraph("img\\Sea.png");
 }

@@ -77,6 +77,8 @@ public:
 	bool hitSFlag;
 	bool hitSpFlag;
 
+	int _SoundHandle;
+
 	Vector2D _velocity;
 	Vector2D _angle;
 	VECTOR playerPos;
