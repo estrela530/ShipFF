@@ -78,6 +78,17 @@ public:
 	bool hitSpFlag;
 
 	int _SoundHandle;
+	//‹›A
+	LargeFish _largeFish;
+
+	//‹›B
+	MiddleFish _middleFish;
+
+	//‹›C
+	SmallFish _smallFish;
+
+	//‹›ƒXƒyƒVƒƒƒ‹
+	Special _special;
 
 	Vector2D _velocity;
 	Vector2D _angle;

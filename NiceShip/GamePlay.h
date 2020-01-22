@@ -6,6 +6,7 @@
 #include "MiddleFish.h"
 #include "SmallFish.h"
 #include "Special.h"
+#include "Score.h"
 #include <vector>
 using namespace std;
 
@@ -40,6 +41,9 @@ private:
 
 	//魚スペシャル
 	Special _special;
+
+	//スコア
+	Score _score;
 
 	std::vector<LargeFish> largeList;
 	std::vector<MiddleFish> middleList;
