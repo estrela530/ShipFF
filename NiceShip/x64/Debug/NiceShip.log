@@ -1,0 +1,64 @@
+﻿  GamePlay.cpp
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(63): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(71): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(79): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(87): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(95): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(103): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(111): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(124): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(132): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(140): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(148): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(156): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(164): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(172): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(185): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(193): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(201): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(209): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(217): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(225): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(233): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(246): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(254): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(262): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(270): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(278): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(286): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(294): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(307): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(315): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(323): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(331): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(339): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(347): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(355): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(368): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(376): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(384): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(392): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(400): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(408): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(416): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(429): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(437): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(445): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(453): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(461): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(469): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nship\niceship\gameplay.cpp(477): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  LargeFish.cpp
+  MiddleFish.cpp
+  Player.cpp
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(31): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(32): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(65): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(71): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(142): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Port.cpp
+  SmallFish.cpp
+  Special.cpp
+  WinMain.cpp
+  コードを生成中...
+  NiceShip.vcxproj -> C:\Users\K018A1815\Desktop\Nship\NiceShip\x64\Debug\NiceShip.exe
