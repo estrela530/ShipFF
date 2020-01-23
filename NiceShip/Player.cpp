@@ -8,6 +8,9 @@
 //	初期化処理
 void Player::Start()
 {
+	//	画像を読み込む
+	_numGrp = GraphFactory::Instance().LoadGraph("img\\number.png");
+
 	_SoundHandle = LoadSoundMem("sound\\fish.mp3");
 	_grp = GraphFactory::Instance().LoadGraph("img\\PlayerShip.png");
 	_size = Vector2D(64, 64);
@@ -105,7 +108,7 @@ void Player::Hit(Special sp)
 	{
 		//PlaySoundFile("sound\\fish", DX_PLAYTYPE_NORMAL);
 
-		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK , true);
+		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK, true);
 		hitSpFlag = TRUE;
 	}
 
@@ -119,6 +122,7 @@ void Player::Hit()
 //	更新
 void Player::Update()
 {
+
 
 	//	キー入力を更新
 	int key = GetJoypadInputState(DX_INPUT_KEY_PAD1);
@@ -192,7 +196,7 @@ void Player::Update()
 				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 				weight = weight + weightL;
 				_vec.x = _vec.x - weight;
-				score = score + _largeFish.score;
+				//score = score + _largeFish.score;
 				//hitLFlag = false;
 			}
 			if (hitMFlag)
@@ -200,7 +204,7 @@ void Player::Update()
 				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 				weight = weight + weightM;
 				_vec.x = _vec.x - weight;
-				score = score + _middleFish.score;
+				//score = score + _middleFish.score;
 
 				//hitMFlag = false;
 			}
@@ -209,7 +213,7 @@ void Player::Update()
 				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 				weight = weight + weightS;
 				_vec.x = _vec.x - weight;
-				score = score + _smallFish.score;
+				//score = score + _smallFish.score;
 
 				//hitSFlag = false;
 			}
@@ -218,7 +222,7 @@ void Player::Update()
 				DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 				weight = weight + weightSp;
 				_vec.x = _vec.x - weight;
-				score = score + _special.score;
+				//score = score + _special.score;
 
 				//hitSpFlag = false;
 			}
@@ -241,6 +245,21 @@ void Player::Update()
 	playerPos = VAdd(playerPos, MoveAngle);
 	_pos = playerPos;
 	//_position += _velocity;
+
+	//6桁まで表示する
+	//for (auto dig = 0; dig < 6; dig++)
+	//{
+	//	auto num = score % 10;
+	//	DrawRectGraph(300 - dig * 60, static_cast<int>(20),
+	//		num * 60, 0,
+	//		60, 60,
+	//		_numGrp,
+	//		TRUE);
+
+	//	//現在の時間を10で割り、桁を下げる
+	//	score=score / 10;
+	//}
+	//	画像を表示する（桁数で画像の座標がわかるように）
 }
 
 
