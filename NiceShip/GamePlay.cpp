@@ -3,6 +3,7 @@
 #include "DxLib.h"
 #include <stdio.h>
 #include <list>
+#include "SceneManager.h"
 using namespace std;
 
 //	‰Šú‰»
@@ -21,6 +22,7 @@ void GamePlay::Initialize()
 	position = 0;
 	seconds = 0;
 	score = 0;
+	_score._playerScore = 0;
 	IsSummonFlag = false;
 }
 
@@ -743,6 +745,10 @@ void GamePlay::Update()
 	_score.Update();
 	_score.Render();
 
+	if (_score._playerScore >= 50000)
+	{
+		SceneManager::Instance().LoadScene("Clear");
+	}
 }
 
 //	‰ð•ú

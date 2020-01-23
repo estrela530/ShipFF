@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameClear.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="GraphFactory.h" />
@@ -36,6 +37,7 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="GraphFactory.cpp" />
     <ClCompile Include="LargeFish.cpp" />

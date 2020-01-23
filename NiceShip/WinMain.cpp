@@ -3,7 +3,8 @@
 #include "Window.h"
 #include "SceneManager.h"
 #include "GamePlay.h"
-#include"Title.h"
+#include "Title.h"
+#include "GameClear.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -28,6 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// シーンを追加する
 	SceneManager::Instance().AddScene("Title", new Title);
 	SceneManager::Instance().AddScene("Game", new GamePlay);
+	SceneManager::Instance().AddScene("Clear", new GameClear);
 
 	//	シーン管理クラスで開始シーンを登録
 	SceneManager::Instance().StartScene("Title");
