@@ -630,7 +630,8 @@ void GamePlay::Update()
 		}
 		if (_player.hitLFlag)
 		{
-			score = _player.score + 3000;
+			/*_player.score = _player.score + 111;*/
+ 			_score._playerScore += 3000;
 
 			largeList.erase(largeList.begin() + i);
 			_player.hitLFlag = false;
@@ -655,8 +656,8 @@ void GamePlay::Update()
 		}
 		if (_player.hitMFlag)
 		{
-			score = _player.score + 1000;
-
+			//_player.score = _player.score + 11;
+			_score._playerScore += 1000;
 			middleList.erase(middleList.begin() + i);
 			_player.hitMFlag = false;
 		}
@@ -681,7 +682,8 @@ void GamePlay::Update()
 		}
 		if (_player.hitSFlag)
 		{
-			score = _player.score + 500;
+			//_player.score = _player.score + 1;
+			_score._playerScore += 500;
 
 			smallList.erase(smallList.begin() + i);
 			_player.hitSFlag = false;
@@ -705,8 +707,8 @@ void GamePlay::Update()
 		}
 		if (_player.hitSpFlag)
 		{
-			score = _player.score + 4000;
-
+			//_player.score = _player.score + 1111;
+			_score._playerScore += 4000;
 			specialList.erase(specialList.begin() + i);
 			_player.hitSpFlag = false;
 		}
@@ -732,10 +734,24 @@ void GamePlay::Update()
 
 
 	position += 3;
+<<<<<<< HEAD
 
 
 	//std::string s = std::to_string(_player.score);
 	//printfDx(s.data());
+=======
+
+<<<<<<< HEAD
+	//std::string s = std::to_string(_player.score);
+	//printfDx(s.data());
+
+=======
+
+
+	//std::string s = std::to_string(_player.score);
+	//printfDx(s.data());
+>>>>>>> f9ce48bf8f69280b3128db214a8a4a2c77101bc0
+>>>>>>> b33f8a389c43837a3e2ead0deefda39ec242e0eb
 
 	_score.Update();
 	_score.Render();

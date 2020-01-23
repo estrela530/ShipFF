@@ -77,6 +77,8 @@ public:
 	bool hitSFlag;
 	bool hitSpFlag;
 
+	int _numGrp;//Player_Score_image
+
 	int _SoundHandle;
 	//‹›A
 	LargeFish _largeFish;
