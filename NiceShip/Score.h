@@ -14,12 +14,13 @@ public:
 	//　更新
 	void Update();
 
+	//スコア
+	int _playerScore;
+
 private:
 	//	画像ハンドル
 	int _numGrp;
 
-	//スコア
-	int _playerScore;
 
 	//プレイヤー
 	Player _player;

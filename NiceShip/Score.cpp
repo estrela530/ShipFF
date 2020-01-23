@@ -12,26 +12,34 @@ void Score::Start()
 	_imageSize = 60;
 }
 
+
 void Score::Update()
 {
-	_playerScore += _player.score;
+	
 }
 
 void Score::Render()
 {
-	//2桁まで表示する
+	int count = _playerScore;
+	//6桁まで表示する
 	for (auto dig = 0; dig < 6; dig++)
 	{
 		//	余りを計算し一桁目の数字を算出
-		auto num = _playerScore %10;
+ 		auto num = count %10;
+
+		//std::string s = std::to_string(_playerScore);
+		//printfDx(s.data());
 
 		//	画像を表示する（桁数で画像の座標がわかるように）
-		DrawRectGraph((Window::WindowWidth / 2) - dig * _imageSize,
-			static_cast<int>(20), num* _imageSize, 0,
-			_imageSize, _imageSize, _numGrp, TRUE);
-
-		////現在の時間を10で割り、桁を下げる
+		DrawRectGraph((Window::WindowWidth / 2) - dig* _imageSize,static_cast<int>(20),
+			num* _imageSize, 0,
+			_imageSize,_imageSize,
+			_numGrp,
+			TRUE);
+		count /= 10;
+		//現在の時間を10で割り、桁を下げる
 		//_playerScore = _playerScore / 10;
+		//_playerScore = 5;
 	}
 }
 
