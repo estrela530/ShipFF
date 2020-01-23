@@ -24,6 +24,7 @@ private:
 	//プレイヤー
 	Player _player;
 
+
 	//	画像のサイズ
 	int _imageSize;
 };

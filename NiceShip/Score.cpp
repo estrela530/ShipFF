@@ -12,13 +12,18 @@ void Score::Start()
 	_imageSize = 60;
 }
 
+void Score::Update()
+{
+	_playerScore += _player.score;
+}
+
 void Score::Render()
 {
 	//2桁まで表示する
 	for (auto dig = 0; dig < 6; dig++)
 	{
 		//	余りを計算し一桁目の数字を算出
-		auto num = _playerScore;
+		auto num = _playerScore %10;
 
 		//	画像を表示する（桁数で画像の座標がわかるように）
 		DrawRectGraph((Window::WindowWidth / 2) - dig * _imageSize,
@@ -30,7 +35,3 @@ void Score::Render()
 	}
 }
 
-void Score::Update()
-{
-	_playerScore += _player.score;
-}

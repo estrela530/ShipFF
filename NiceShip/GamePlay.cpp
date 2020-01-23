@@ -20,6 +20,7 @@ void GamePlay::Initialize()
 	//_special.Start();
 	position = 0;
 	seconds = 0;
+	score = 0;
 	IsSummonFlag = false;
 }
 
@@ -39,11 +40,11 @@ void GamePlay::Update()
 
 	//XV
 	_player.Update();
-	_port.Update();
+	//_port.Update();
 
 	//•`‰æ
 	_player.Render();
-	_port.Render();
+	//_port.Render();
 
 
 #pragma region ‹›ƒ‰ƒ“ƒ_ƒ€¶¬
@@ -622,9 +623,14 @@ void GamePlay::Update()
 		largeList[i].Update();
 		largeList[i].Render();
 		_player.Hit(largeList[i]);
+		if (largeList[i]._position.x > 1980)
+		{
+			largeList.erase(largeList.begin() + i);
+
+		}
 		if (_player.hitLFlag)
 		{
-			_player.score = _player.score + 3000;
+			score = _player.score + 3000;
 
 			largeList.erase(largeList.begin() + i);
 			_player.hitLFlag = false;
@@ -633,6 +639,8 @@ void GamePlay::Update()
 		{
 			i++;
 		}
+
+		
 	}
 
 	for (auto i = 0; i < middleList.size();)
@@ -640,9 +648,14 @@ void GamePlay::Update()
 		middleList[i].Update();
 		middleList[i].Render();
 		_player.Hit(middleList[i]);
+		if (middleList[i]._position.x > 1980)
+		{
+			middleList.erase(middleList.begin() + i);
+
+		}
 		if (_player.hitMFlag)
 		{
-			_player.score = _player.score + 1000;
+			score = _player.score + 1000;
 
 			middleList.erase(middleList.begin() + i);
 			_player.hitMFlag = false;
@@ -661,9 +674,14 @@ void GamePlay::Update()
 		smallList[i].Update();
 		smallList[i].Render();
 		_player.Hit(smallList[i]);
+		if (smallList[i]._position.x > 1980)
+		{
+			smallList.erase(smallList.begin() + i);
+
+		}
 		if (_player.hitSFlag)
 		{
-			_player.score = _player.score + 500;
+			score = _player.score + 500;
 
 			smallList.erase(smallList.begin() + i);
 			_player.hitSFlag = false;
@@ -680,9 +698,14 @@ void GamePlay::Update()
 		specialList[i].Update();
 		specialList[i].Render();
 		_player.Hit(specialList[i]);
+		if (specialList[i]._position.x > 1980)
+		{
+			specialList.erase(specialList.begin() + i);
+
+		}
 		if (_player.hitSpFlag)
 		{
-			_player.score = _player.score + 4000;
+			score = _player.score + 4000;
 
 			specialList.erase(specialList.begin() + i);
 			_player.hitSpFlag = false;
@@ -709,8 +732,7 @@ void GamePlay::Update()
 
 
 	position += 3;
-	std::string s = std::to_string(_player.score);
-	printfDx(s.data());
+
 
 	_score.Update();
 	_score.Render();

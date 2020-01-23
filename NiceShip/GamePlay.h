@@ -62,4 +62,6 @@ private:
 	int Random[7];
 	bool IsSummonFlag;
 	int seconds;
+
+	int score;
 };
