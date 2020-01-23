@@ -8,6 +8,7 @@
 //	初期化処理
 void Player::Start()
 {
+	_SoundHandle = LoadSoundMem("sound\\fish.mp3");
 	_grp = GraphFactory::Instance().LoadGraph("img\\PlayerShip.png");
 	_size = Vector2D(64, 64);
 	_radius = 16;
@@ -60,9 +61,10 @@ void Player::Hit(LargeFish l)
 
 	if (x < (playerWid + l._size.x) / 2 && y < (playerHei + l._size.y) / 2)
 	{
+		//PlaySoundFile("sound\\fish", DX_PLAYTYPE_NORMAL);
+		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK, true);
 		hitLFlag = TRUE;
 	}
-
 }
 
 void Player::Hit(MiddleFish m)
@@ -72,6 +74,8 @@ void Player::Hit(MiddleFish m)
 
 	if (x < (playerWid + m._size.x) / 2 && y < (playerHei + m._size.y) / 2)
 	{
+		//PlaySoundFile("sound\\fish", DX_PLAYTYPE_NORMAL);
+		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK, true);
 		hitMFlag = TRUE;
 	}
 
@@ -84,6 +88,9 @@ void Player::Hit(SmallFish s)
 
 	if (x < (playerWid + s._size.x) / 2 && y < (playerHei + s._size.y) / 2)
 	{
+		//PlaySoundFile("sound\\fish", DX_PLAYTYPE_NORMAL);
+
+		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK, true);
 		hitSFlag = TRUE;
 	}
 
@@ -96,6 +103,9 @@ void Player::Hit(Special sp)
 
 	if (x < (playerWid + sp._size.x) / 2 && y < (playerHei + sp._size.y) / 2)
 	{
+		//PlaySoundFile("sound\\fish", DX_PLAYTYPE_NORMAL);
+
+		PlaySoundMem(_SoundHandle, DX_PLAYTYPE_BACK , true);
 		hitSpFlag = TRUE;
 	}
 
@@ -109,6 +119,7 @@ void Player::Hit()
 //	更新
 void Player::Update()
 {
+
 	//	キー入力を更新
 	int key = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 	//static int inputFrame = 0;
