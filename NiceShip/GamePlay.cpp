@@ -12,6 +12,7 @@ void GamePlay::Initialize()
 	_gameImage = GraphFactory::Instance().LoadGraph("img\\Sea.png");
 	_player.Start();
 	_port.Start();
+	_score.Start();
 	//_largeFish.Start();
 	//_middleFish.Start();
 	//_smallFish.Start();
@@ -621,6 +622,8 @@ void GamePlay::Update()
 		_player.Hit(largeList[i]);
 		if (_player.hitLFlag)
 		{
+			_player.score = _player.score + 3000;
+
 			largeList.erase(largeList.begin() + i);
 			_player.hitLFlag = false;
 		}
@@ -637,6 +640,8 @@ void GamePlay::Update()
 		_player.Hit(middleList[i]);
 		if (_player.hitMFlag)
 		{
+			_player.score = _player.score + 1000;
+
 			middleList.erase(middleList.begin() + i);
 			_player.hitMFlag = false;
 		}
@@ -656,6 +661,7 @@ void GamePlay::Update()
 		_player.Hit(smallList[i]);
 		if (_player.hitSFlag)
 		{
+			_player.score = _player.score + 500;
 
 			smallList.erase(smallList.begin() + i);
 			_player.hitSFlag = false;
@@ -674,6 +680,8 @@ void GamePlay::Update()
 		_player.Hit(specialList[i]);
 		if (_player.hitSpFlag)
 		{
+			_player.score = _player.score + 4000;
+
 			specialList.erase(specialList.begin() + i);
 			_player.hitSpFlag = false;
 		}
@@ -697,9 +705,13 @@ void GamePlay::Update()
 	//_smallFish.Render();
 	//_special.Render();
 
+
 	position += 3;
+	std::string s = std::to_string(_player.score);
+	printfDx(s.data());
 
-
+	_score.Update();
+	_score.Render();
 
 }
 
