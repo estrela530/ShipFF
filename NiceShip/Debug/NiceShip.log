@@ -49,7 +49,7 @@ c:\teamship\niceship\gameplay.cpp(576): warning C4244: '=': 'int' から 'float'
 c:\teamship\niceship\gameplay.cpp(586): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
 c:\teamship\niceship\gameplay.cpp(596): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
 c:\teamship\niceship\gameplay.cpp(620): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\teamship\niceship\gameplay.cpp(639): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\teamship\niceship\gameplay.cpp(660): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-c:\teamship\niceship\gameplay.cpp(679): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\teamship\niceship\gameplay.cpp(646): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\teamship\niceship\gameplay.cpp(672): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\teamship\niceship\gameplay.cpp(696): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
   NiceShip.vcxproj -> C:\teamShip\NiceShip\Debug\NiceShip.exe

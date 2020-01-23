@@ -736,11 +736,24 @@ void GamePlay::Update()
 
 
 	position += 3;
-
+<<<<<<< HEAD
 
 
 	//std::string s = std::to_string(_player.score);
 	//printfDx(s.data());
+=======
+
+<<<<<<< HEAD
+	//std::string s = std::to_string(_player.score);
+	//printfDx(s.data());
+
+=======
+
+
+	//std::string s = std::to_string(_player.score);
+	//printfDx(s.data());
+>>>>>>> f9ce48bf8f69280b3128db214a8a4a2c77101bc0
+>>>>>>> b33f8a389c43837a3e2ead0deefda39ec242e0eb
 
 	_score.Update();
 	_score.Render();

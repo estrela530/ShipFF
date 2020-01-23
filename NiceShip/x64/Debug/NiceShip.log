@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+﻿  Score.cpp
+  WinMain.cpp
+  コードを生成中...
+  NiceShip.vcxproj -> C:\Users\K018A1815\Desktop\プレイ会\NiceShip\x64\Debug\NiceShip.exe
+=======
 ﻿  GamePlay.cpp
 c:\users\k018a1697\desktop\gamejam12\kanseimazika\niceship\gameplay.cpp(76): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
 c:\users\k018a1697\desktop\gamejam12\kanseimazika\niceship\gameplay.cpp(86): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
@@ -49,3 +55,4 @@ c:\users\k018a1697\desktop\gamejam12\kanseimazika\niceship\gameplay.cpp(578): wa
 c:\users\k018a1697\desktop\gamejam12\kanseimazika\niceship\gameplay.cpp(588): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
 c:\users\k018a1697\desktop\gamejam12\kanseimazika\niceship\gameplay.cpp(598): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
   NiceShip.vcxproj -> C:\Users\K018A1697\Desktop\gamejam12\kanseimazika\NiceShip\x64\Debug\NiceShip.exe
+>>>>>>> f9ce48bf8f69280b3128db214a8a4a2c77101bc0
