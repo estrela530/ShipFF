@@ -709,8 +709,8 @@ void GamePlay::Update()
 
 
 	position += 3;
-	std::string s = std::to_string(_player.score);
-	printfDx(s.data());
+	//std::string s = std::to_string(_player.score);
+	//printfDx(s.data());
 
 	_score.Update();
 	_score.Render();
